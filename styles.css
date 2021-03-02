@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+    color: white;
+    font-family: Graduate;
+    margin-top: 8%;
+    margin-left: 4.7%;
+    font-size: 80px;
+}
+
+h2 {
+    margin: 0;
+    color: white;
+    font-family: Graduate;
+    margin-left: 4.5%;
+    font-size: 75px;
+}
+
+h3 {
+    margin: 0;
+    color: white;
+    font-family: Graduate;
+    margin-left: 4.7%;
+    font-size: 70px;
+}
+
+.background {
+    left: 0;
+    top: 0;
+    position: relative;
+    background: url(images/background.jpeg) no-repeat center center;
+    width: 100vw;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    font-family: Graduate;
+    margin-top: 39vh;
+    border-radius: 20px;
+    font-size: 35px;
+    width: 300px;
+    height: 40px;
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+    background: #ff8d23;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    z-index: 15;
+    padding: 20px;
+    margin-left: 4.5%;
+    opacity: 0.5;
+}
+
+@media screen and (max-height: 850px) {
+    .button {
+        margin-top: 36vh;
+    }
+    .button:hover {
+        margin-top: 36.1vh;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .button {
+        margin-top: 30vh;
+    }
+    .button:hover {
+        margin-top: 30.1vh;
+    }
+}
+
+@media screen and (max-height: 750px) {
+    .button {
+        margin-top: 25vh;
+    }
+    .button:hover {
+        margin-top: 25.1vh;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    h1 {
+        font-size: 5.8vw;
+    }
+    h2 {
+        font-size: 5.36vw;
+    }
+    h3 {
+        font-size: 4.92vw;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .button {
+        margin-top: 36vh;
+    }
+    .button:hover {
+        margin-top: 36.1vh;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .button {
+        margin-top: 36vh;
+    }
+    .button:hover {
+        margin-top: 36.1vh;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .button {
+        margin-left: 50%;
+        margin-right: 50%;
+        text-align: center;
+        margin-top: 55vh;
+        border-radius: 0;
+        height: auto;
+        font-size: 5.625vw;
+        line-height: 5.625vw;
+        width: 100vw;
+        margin-left: 0;
+        opacity: 1;
+        padding-top: 5vh;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 5vh;
+        font-size: 85px;
+    }
+    .button:hover {
+        margin-top: 55.1vh;
+    }
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+    }
+    h1 {
+        margin-top: 11.2vh;
+    }
+}
+
+@media screen and (max-width: 643px) {
+    .button {
+        font-size: 13.1vw;
+    }
+}
