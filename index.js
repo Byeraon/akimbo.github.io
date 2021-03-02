@@ -2,8 +2,9 @@ $(function() {
     // устанавливаем прозрачность изображения на 50%
     $(window).load(setEqualHeight);
     $(window).resize(setEqualHeight);
-    $(window).load(checkIOS);
-    $(window).resize(checkIOS);
+    $(window).load(tlp);
+
+
     $(".button").css("opacity", "0.5");
     $(".button").hover(function() {
             // после чего прозрачность исчезает
@@ -43,10 +44,39 @@ $(function() {
         }
     }
 
-    function checkIOS() {
-        var is_uiwebview = document.getElementById("id4");
-        is_uiwebview.innerHTML = /(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i.test(navigator.userAgent);
-        var is_safari_or_uiwebview = document.getElementById("id5");
-        is_safari_or_uiwebview.innerHTML = /(iPhone|iPod|iPad).*AppleWebKit/i.test(navigator.userAgent);
+    function tlp() {
+        Element.prototype.reshape = function() {
+            var self = this;
+
+
+            function change() {
+                var is_safari_or_uiwebview = document.getElementById("id5");
+                is_safari_or_uiwebview = /(iPhone|iPod|iPad).*AppleWebKit/i.test(navigator.userAgent);
+                if (is_safari_or_uiwebview == true) {
+                    self.style.marginLeft = "50%";
+                    self.style.marginRight = "50%";
+                    self.style.textAlign = "center";
+                    self.style.marginTop = "55vh";
+                    self.style.borderRadius = "0";
+                    self.style.height = "auto";
+                    self.style.fontSize = "5.625vw";
+                    self.style.lineHeight = "5.625vw";
+                    self.style.width = "100vw";
+                    self.style.marginLeft = "0";
+                    self.style.opacity = "0.5";
+                    self.style.paddingTop = "5vh";
+                    self.style.paddingLeft = "0";
+                    self.style.paddingRight = "0";
+                    self.style.paddingBottom = "5vh";
+                    self.style.fontSize = "13.1vw";
+
+                }
+                console.log(is_safari_or_uiwebview);
+            }
+
+            return change();
+        };
+
+        document.getElementById('but').reshape();
     }
 });
